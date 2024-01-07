@@ -11,7 +11,8 @@ local function versionCheckPrint(_type, log)
 end
 
 local function CheckVersion()
-    PerformHttpRequest('https://raw.githubusercontent.com/Rexshack-RedM/rsg-ranch/main/version.txt', function(err, text, headers)
+    --PerformHttpRequest('https://raw.githubusercontent.com/Rexshack-RedM/rsg-ranch/main/version.txt', function(err, text, headers)
+    PerformHttpRequest('https://github.com/Andyauk/rsg-ranch/blob/main/version.txt', function(err, text, headers)
         local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
 
         if not text then 
